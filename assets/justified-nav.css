@@ -1,0 +1,100 @@
+body {
+  padding-top: 20px;
+}
+
+.footer {
+  border-top: 1px solid #eee;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+/* Main marketing message and sign up button */
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+}
+.jumbotron .btn {
+  font-size: 21px;
+  padding: 14px 24px;
+}
+
+/* Customize the nav-justified links to be fill the entire space of the .navbar */
+
+.nav-justified {
+
+ 
+}
+ .nav-justified > li > a {
+    border-left: 1px solid rgba(250,250,250, 0.1);
+    border-right: 1px solid rgba(0,0,0, 0.7);
+  }
+.nav-justified > li > a {
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  font-weight: bold;
+  text-align: center;
+  
+}
+.nav-justified > li > a:hover{
+	background:rgba(0,0,0, 0.2);
+}
+.nav-justified > .active > a,
+.nav-justified > .active > a:hover,
+.nav-justified > .active > a:focus {
+
+  box-shadow: inset 0 3px 7px rgba(0,0,0,.15);
+}
+.nav-justified > li:first-child > a {
+  
+}
+.nav-justified > li:last-child > a {
+  border-bottom: 0;
+  
+}
+
+
+
+@media (max-width: 768px) {
+	body{
+		padding-top:0px;
+	}
+ 
+  .nav-justified > li:first-child > a {
+    border-left: 0;
+
+  }
+  .nav-justified > li:last-child > a {
+   border-left:0px;
+    border-right: 0px;
+  }
+  .nav-justified > li{
+	float:none;
+	display:block;
+	width:100%;
+
+  } 
+
+   .nav-justified > li > a {
+     border-left:0px;
+    border-right: 0px;
+  }
+  .navbar-collapse{
+	padding-right:0px;
+	padding-left:0px;
+  }
+}
+
+
+
+/* Responsive: Portrait tablets and up */
+@media screen and (min-width: 768px) {
+  /* Remove the padding we set earlier */
+  .masthead,
+  .marketing,
+  .footer {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
