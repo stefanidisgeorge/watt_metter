@@ -6,9 +6,9 @@
 //0EnergyMonitor emon1; // Äçìéïõñãßá óôéãìéüôõðïõ
 EthernetClient client; // Äçìéïõñãßá óôéãìéüôõðïõ
 byte mac[] = { 0x00, 0x65, 0x37, 0x7F, 0xDC, 0x31 };  
-byte ip[] = { 10, 188, 7, 72 };    
-byte gateway[] = { 10, 188, 7, 65 };
-byte subnet[] = { 255, 255, 255, 224 };
+//byte ip[] = { 10, 188, 7, 72 };    
+//byte gateway[] = { 10, 188, 7, 65 };
+//byte subnet[] = { 255, 255, 255, 224 };
 
 byte serverName[] = { 63, 142, 253, 229 };
 double P, I;
@@ -16,12 +16,21 @@ double P, I;
 void setup()
 {
   //emon1.current(0, 6);
-  Ethernet.begin(mac, ip, gateway);
+  Ethernet.begin(mac);
   Serial.begin(9600);
 }
 
+
+
+
+
+
+
+
 void loop()
 {
+
+  Serial.println(Ethernet.localIP());
   if (client.connect(serverName,80)) 
   {
    I = random(1,5000);
