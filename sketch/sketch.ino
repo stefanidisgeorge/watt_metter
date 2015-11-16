@@ -1,14 +1,16 @@
 #include <SPI.h>
 #include <Ethernet.h>
 #include <utility/w5100.h>
-//#include "EmonLib.h"
+
+//Prepei oloi sas na valete tin EmonLib.h sto Arduino IDE
+//https://github.com/openenergymonitor/EmonLib
+#include "EmonLib.h"
 
 //0EnergyMonitor emon1; // Äçìéïõñãßá óôéãìéüôõðïõ
 EthernetClient client; // Äçìéïõñãßá óôéãìéüôõðïõ
+
+//an valoume mono mac tote apo mono tou pernei DHCP
 byte mac[] = { 0x00, 0x65, 0x37, 0x7F, 0xDC, 0x31 };  
-//byte ip[] = { 10, 188, 7, 72 };    
-//byte gateway[] = { 10, 188, 7, 65 };
-//byte subnet[] = { 255, 255, 255, 224 };
 
 byte serverName[] = { 63, 142, 253, 229 };
 double P, I;
