@@ -2,14 +2,14 @@
 #include <Ethernet.h>
 #include <utility/w5100.h>
 
-//Prepei oloi sas na valete tin EmonLib.h sto Arduino IDE
+//You must install EmonLib.h library at Arduino IDE
 //https://github.com/openenergymonitor/EmonLib
 #include "EmonLib.h"
 
 //0EnergyMonitor emon1; // Äçìéïõñãßá óôéãìéüôõðïõ
 EthernetClient client; // Äçìéïõñãßá óôéãìéüôõðïõ
 
-//an valoume mono mac tote apo mono tou pernei DHCP
+//If we set only a MAC Address then DHCP Client runs automaticaly 
 byte mac[] = { 0x00, 0x65, 0x37, 0x7F, 0xDC, 0x31 };  
 
 byte serverName[] = { 63, 142, 253, 229 };
