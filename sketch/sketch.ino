@@ -12,6 +12,8 @@ EthernetClient client; // Äçìéïõñãßá óôéãìéüôõðïõ
 //If we set only a MAC Address then DHCP Client runs automaticaly 
 byte mac[] = { 0x00, 0x65, 0x37, 0x7F, 0xDC, 0x31 };  
 
+
+//our temporary server address
 byte serverName[] = { 63, 142, 253, 229 };
 double P, I;
 
