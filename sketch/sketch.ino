@@ -7,10 +7,11 @@
 #include "EmonLib.h"
 
 //0EnergyMonitor emon1; // Äçìéïõñãßá óôéãìéüôõðïõ
-EthernetClient client; // Äçìéïõñãßá óôéãìéüôõðïõ
+//start ethernet client
+EthernetClient client;
 
-//If we set only a MAC Address then DHCP Client runs automaticaly 
-byte mac[] = { 0x00, 0x65, 0x37, 0x7F, 0xDC, 0x31 };  
+//If we set only a MAC Address then DHCP Client runs automaticaly
+byte mac[] = { 0x00, 0x65, 0x37, 0x7F, 0xDC, 0x31 };
 
 
 //our temporary server address
@@ -35,10 +36,10 @@ void loop()
 {
 
   Serial.println(Ethernet.localIP());
-  if (client.connect(serverName,80)) 
+  if (client.connect(serverName,80))
   {
    I = random(1,5000);
-    P = random(1,5000);  // Õðïëïãéóìüò ôñÝ÷ïõóáò éó÷ýïò 
+    P = random(1,5000);  // Õðïëïãéóìüò ôñÝ÷ïõóáò éó÷ýïò
     String  mainData = "consumption=" + doubleToString(P, 2);
     client.println("POST /update.php HTTP/1.1");
     client.println("Host: 63.142.253.229");
@@ -74,7 +75,7 @@ String doubleToString(double input,int decimalPlaces)
     }
     return string.substring(0,string.length()-decimalPlaces)+"."+string.substring(string.length()-decimalPlaces);
     }
-  else 
+  else
   {
     return String((int)input);
   }
