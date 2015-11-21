@@ -1,8 +1,9 @@
 <?php
 require("dbconnect.php");
-if (isset($_POST['consumption']) )
+date_default_timezone_set('Europe/Athens');
+if (isset($_REQUEST['consumption']) )
 {
-$consumption = abs($_POST['consumption']);
+$consumption = abs($_REQUEST['consumption']);
 $sum=0;
 $counter=0;
 $currentDate =  date('d/m/Y H:i:s a');
@@ -17,26 +18,26 @@ $currentDate =  date('d/m/Y H:i:s a');
 				{
 				    $id=$getInfo['id'];
 					$lastedate = $getInfo['date'];
-					$lasttime = $getInfo['time'];	
-					$lastsum = $getInfo['sum'];	
-					$lastcounter = $getInfo['counter'];	
+					$lasttime = $getInfo['time'];
+					$lastsum = $getInfo['sum'];
+					$lastcounter = $getInfo['counter'];
 					}
-	
+
 	$changedTime = ($hour != $lasttime);
 	$changedDate = ($date != $lastedate);
 
 if($changedDate==true)
 {
-$insertLogSQL = $odb -> prepare("INSERT INTO `stats`(`date`,`time`,`watt`, `sum`, `counter`) VALUES (".$date.",".$hour.",".$consumption.",0,1)");
+$insertLogSQL = $odb -> prepare("INSERT INTO `stats`(`date`,`time`,`watt`, `sum`, `counter`) VALUES (".$date.",".$hour.",".$consumption.",".$consumption.",1)");
 $insertLogSQL -> execute();
 }
 else
-{		
+{
 if($changedTime==true)
 {
-$sum=$lastsum+$consumption;
-$counter=$lastcounter+1;
-$insertLogSQL = $odb -> prepare("INSERT INTO `stats`(`date`,`time`,`watt`, `sum`, `counter`) VALUES (".$date.",".$hour.",".$consumption.",".$sum.",".$counter.")");
+$sum=$consumption;
+$counter=1;
+$insertLogSQL = $odb -> prepare("INSERT INTO `stats`(`date`,`time`,`watt`, `sum`, `counter`) VALUES (".$date.",".$hour.",".$consumption.",".$consumption.",".$counter.")");
 $insertLogSQL -> execute();
 }
 else

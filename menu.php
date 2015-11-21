@@ -14,7 +14,7 @@
    <div class="collapse navbar-collapse navbar-ex8-collapse">
      <ul class="nav navbar-nav">
        <li class="active"><a href="#">Home</a></li>
-       <li><a href="#">Link</a></li>
+       <li><a href="about-us.php">About Us</a></li>
  <li><a href="#">Link</a></li>
 
      </ul>

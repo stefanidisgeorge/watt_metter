@@ -1,5 +1,5 @@
 var g1, newElement = 0, userConsumption = {status: "",watts: "", deviceID: ""};
-			
+
 function loadDevices()
 {
 userConsumption.deviceID = "1";
@@ -29,8 +29,9 @@ window.onload = function()
 document.getElementById('content').style.marginLeft= "0%";
 loadDevices();
 g1 = new JustGage({
-  id: "g1", 
-  value: "", 
+  id: "g1",
+  value: "",
+  title:"Current Watt Consumption",
   min: 0,
   max: 5000,
   valueFontColor: "#ffffff",
@@ -46,4 +47,3 @@ function updateWatts(watts)
 {
 g1.refresh(watts);
 }
-

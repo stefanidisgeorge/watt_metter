@@ -1,6 +1,6 @@
 <?php
 error_reporting(-1);
-//connect to database
+
 define('DB_HOST', 'vasilis.pw');
 define('DB_NAME', 'admin_watt');
 define('DB_USERNAME', 'admin_watt');
