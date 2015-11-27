@@ -6,7 +6,7 @@
 //https://github.com/openenergymonitor/EmonLib
 #include "EmonLib.h"
 
-//0EnergyMonitor emon1; // Äçìéïõñãßá óôéãìéüôõðïõ
+EnergyMonitor emon1; // Äçìéïõñãßá óôéãìéüôõðïõ
 //start ethernet client
 EthernetClient client;
 
