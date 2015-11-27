@@ -20,7 +20,8 @@ double P, I;
 
 void setup()
 {
-  //emon1.current(0, 6);
+  //sto analog0 to vazoume
+  emon1.current(0, 6);
   Ethernet.begin(mac);
   Serial.begin(9600);
 }
@@ -38,8 +39,8 @@ void loop()
   Serial.println(Ethernet.localIP());
   if (client.connect(serverName,80))
   {
-   I = random(1,5000);
-    P = random(1,5000);  // Õðïëïãéóìüò ôñÝ÷ïõóáò éó÷ýïò
+    I = emon1.calcIrms(1480);
+    P = 230.0 * I;
     String  mainData = "consumption=" + doubleToString(P, 2);
     client.println("POST /update.php HTTP/1.1");
     client.println("Host: 104.131.163.78");
