@@ -1,40 +1,40 @@
 <?php
-    // Start MySQL Connection
-    include('dbconnect.php');
-	date_default_timezone_set('Europe/Athens');
-	
-	
-	$currentDate =  date('d/m/Y H:i:s a');
-	$hour = $currentDate[11] . $currentDate[12];
-	$day = $currentDate[0] . $currentDate[1];
-	$month = $currentDate[3] . $currentDate[4];
-	$year = $currentDate[6] . $currentDate[7] . $currentDate[8] . $currentDate[9];
-    $date = $day.$month.$year;
-$array = array();
+// Start MySQL Connection
+include('dbconnect.php');
+date_default_timezone_set('Europe/Athens');
 
-	$SQLGetLogs = $odb -> query("SELECT * FROM `stats` ORDER BY `id` DESC Limit 48");
-				while($getInfo = $SQLGetLogs -> fetch(PDO::FETCH_ASSOC))
-				{
-				    //$id=$getInfo['id'];
-					$lastdate = $getInfo['date'];
-					$datenumber = substr($lastdate , 0, -6);
-					$lasttime = $getInfo['time'];	
-                    $watt = $getInfo['sum'];	
-                    if($datenumber==$day) {
-                     $array[$lasttime] =  $watt;
 
-					}
-					}
-	
+$currentDate = date('d/m/Y H:i:s a');
+$hour        = $currentDate[11] . $currentDate[12];
+$day         = $currentDate[0] . $currentDate[1];
+$month       = $currentDate[3] . $currentDate[4];
+$year        = $currentDate[6] . $currentDate[7] . $currentDate[8] . $currentDate[9];
+$date        = $day . $month . $year;
+$array       = array();
+
+$SQLGetLogs = $odb->query("SELECT * FROM `stats` ORDER BY `id` DESC Limit 48");
+while ($getInfo = $SQLGetLogs->fetch(PDO::FETCH_ASSOC)) {
+    //$id=$getInfo['id'];
+    $lastdate   = $getInfo['date'];
+    $datenumber = substr($lastdate, 0, -6);
+    $lasttime   = $getInfo['time'];
+    $watt       = $getInfo['sum'];
+    $counter    = $getInfo['counter'];
+    if ($datenumber == $day) {
+        $array[$lasttime] = $watt / $counter;
+        
+    }
+}
+
 asort($array);
-	
+
 ?>
 
 <script>
 $(function () {
     $('#container').highcharts({
         title: {
-            text: 'Hourly Watt Consumption',
+            text: 'Hourly Average Watt Consumption',
             x: -20 //center
         },
         xAxis: {

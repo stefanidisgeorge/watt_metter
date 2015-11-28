@@ -1,5 +1,5 @@
 <?php
-error_reporting(-1);
+error_reporting(0);
 
 define('DB_HOST', 'vasilis.pw');
 define('DB_NAME', 'admin_watt');

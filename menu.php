@@ -15,7 +15,7 @@
      <ul class="nav navbar-nav">
        <li class="active"><a href="#">Home</a></li>
        <li><a href="about-us.php">About Us</a></li>
- <li><a href="#">Link</a></li>
+ <li><a href="about-project.php">About the Project</a></li>
 
      </ul>
    </div><!-- /.navbar-collapse -->

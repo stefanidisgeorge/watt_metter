@@ -1,8 +1,16 @@
 <?php
-    // Start MySQL Connection
-    include('dbconnect.php');
+if(!isset($_COOKIE["lang"])) {
+$query = json_decode(file_get_contents('https://freegeoip.net/json/'.$_SERVER['REMOTE_ADDR']));
+$country=$query->{'country_code'};
+if($country=="GR"){
+setcookie("lang", "GR", time() + (86400 * 30), "/");
+}
+else
+{
+setcookie("lang", "ENG", time() + (86400 * 30), "/");
+}
+}
 ?>
-
 
 <!DOCTYPE html>
 <html>
@@ -12,9 +20,6 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <script src = 'http://code.jquery.com/jquery-1.8.2.min.js'></script>
-	<script src = 'updateWatt.js'></script>
-	<script src="raphael-2.1.4.min.js"></script>
-<script src="justgage-1.1.0.min.js"></script>
     <link href="css/theme.css" rel="stylesheet" media="screen">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 
@@ -23,10 +28,12 @@
 <body>
     <section class="container">
       <?php include('menu.php');  ?>
-        <div class="jumbotron" style="text-align: center">
-            <h1>About Us</h1>
+       
+<?php if($_COOKIE["lang"]=="GR"){ ?>
+<!-- Greek -->
+	   <div class="jumbotron" style="text-align: center">
+            <h1>Σχετικά με την ομάδα μας</h1>
 
-			<form  style="text-align: center;" class = "firstForm" id = "content">
 		<div  style="text-align: left;" class = "content">
       <p>Το παρόν site είναι κομμάτι ενός project από μια ομάδα φοιτητών του Τμήματος Μηχανικών Πληροφορικής και Τηλεπικοινωνιών του Πανεπιστημίου Δυτικής Μακεδονίας. </p>
 
@@ -39,7 +46,7 @@
   <h3>Η ομάδα αποτελείται από 4 άτομα :</h3>
   <ul>
   <li>Γιώργος Στεφανίδης | <a href="https://www.facebook.com/georgestef" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/stefanidisgeorge" <i class="fa fa-linkedin"></a> </li>
-  <li>Μόδης Αλέξανδρος | <a href="https://www.facebook.com/alexander.modis" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/alexmodis" <i class="fa fa-linkedin"></i></a> </li>
+  <li>Αλέξανδρος Μόδης | <a href="https://www.facebook.com/alexander.modis" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/alexmodis" <i class="fa fa-linkedin"></i></a> </li>
   <li>Γιώργος Δήμας | <a href="https://www.facebook.com/geodimas" <i class="fa fa-facebook-official"></a></i> | <i class="fa fa-linkedin"></i> </li>
   <li>Βασίλης Μπαλάφας | <a href="https://www.facebook.com/Vasilis197" <i class="fa fa-facebook-official"></a></i> | <i class="fa fa-linkedin"></i> </li>
   </ul>
@@ -48,7 +55,38 @@
 
          </div>
 </div>
-		</form>
+
+<!-- End Greek -->
+<?php } else { ?>
+<!-- English-->
+
+        <div class="jumbotron" style="text-align: center">
+            <h1>About Us</h1>
+
+		<div  style="text-align: left;" class = "content">
+      <p>This website is part of a project from a team of students of Department of Informatics Telecommunications Engineering of University of Western Macedonia</p>
+
+      <p>The target was the construction of a Watt cosmumption counter with the help of an Arduino microcontroller. Then we present the stats we got from the Arduino in this website.</p>
+
+      <p>Beyond the live indication of the consumption, there is the ability to present past data with the form of graphs.</p>
+
+ <p>
+ <p>
+  <h3>The team consists of 4 people :</h3>
+  <ul>
+  <li>George Stefanidis | <a href="https://www.facebook.com/georgestef" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/stefanidisgeorge" <i class="fa fa-linkedin"></a> </li>
+  <li>Alexandros Modis | <a href="https://www.facebook.com/alexander.modis" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/alexmodis" <i class="fa fa-linkedin"></i></a> </li>
+  <li>George Dimas | <a href="https://www.facebook.com/geodimas" <i class="fa fa-facebook-official"></a></i> | <i class="fa fa-linkedin"></i> </li>
+  <li>Vasilis Balafas | <a href="https://www.facebook.com/Vasilis197" <i class="fa fa-facebook-official"></a></i> | <i class="fa fa-linkedin"></i> </li>
+  </ul>
+
+
+
+         </div>
+</div>
+<!-- End English -->
+<?php } ?>
+
 
 
         <div class="row">

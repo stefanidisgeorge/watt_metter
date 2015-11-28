@@ -15,7 +15,7 @@ byte mac[] = { 0x00, 0x65, 0x37, 0x7F, 0xDC, 0x31 };
 
 
 //our temporary server address
-byte serverName[] = { 23, 95, 100, 186 };
+byte serverName[] = { 104, 131, 163, 78 };
 double P, I;
 
 void setup()
@@ -44,7 +44,7 @@ void loop()
     P = 230*I;
     String  mainData = "consumption=" + doubleToString(P, 2);
     client.println("POST /update.php HTTP/1.1");
-    client.println("Host: 23.95.100.186");
+    client.println("Host: 104.131.163.78");
     client.println("User-Agent: arduino-ethernet");
     client.println("Content-Type: application/x-www-form-urlencoded");
     client.println("Connection: close");
