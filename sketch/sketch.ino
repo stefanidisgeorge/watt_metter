@@ -21,9 +21,10 @@ double P, I;
 void setup()
 {
   //sto analog0 to vazoume
-  emon1.current(0, 6);
+  emon1.current(1, 6);
   Ethernet.begin(mac);
   Serial.begin(9600);
+    
 }
 
 
@@ -40,7 +41,7 @@ void loop()
   if (client.connect(serverName,80))
   {
     I = emon1.calcIrms(1480);
-    P = 230.0 * I;
+    P = 41.17 * I;
     String  mainData = "consumption=" + doubleToString(P, 2);
     client.println("POST /update.php HTTP/1.1");
     client.println("Host: 104.131.163.78");
