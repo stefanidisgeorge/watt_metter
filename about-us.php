@@ -28,7 +28,7 @@ setcookie("lang", "ENG", time() + (86400 * 30), "/");
 <body>
     <section class="container">
       <?php include('menu.php');  ?>
-       
+
 <?php if($_COOKIE["lang"]=="GR"){ ?>
 <!-- Greek -->
 	   <div class="jumbotron" style="text-align: center">
@@ -76,7 +76,7 @@ setcookie("lang", "ENG", time() + (86400 * 30), "/");
   <ul>
   <li>George Stefanidis | <a href="https://www.facebook.com/georgestef" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/stefanidisgeorge" <i class="fa fa-linkedin"></a> </li>
   <li>Alexandros Modis | <a href="https://www.facebook.com/alexander.modis" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/alexmodis" <i class="fa fa-linkedin"></i></a> </li>
-  <li>George Dimas | <a href="https://www.facebook.com/geodimas" <i class="fa fa-facebook-official"></a></i> | <i class="fa fa-linkedin"></i> </li>
+  <li>George Dimas | <a href="https://www.facebook.com/geodimas" <i class="fa fa-facebook-official"></a></i> |<a href="https://gr.linkedin.com/" <i class="fa fa-linkedin"></i> </a></li>
   <li>Vasilis Balafas | <a href="https://www.facebook.com/Vasilis197" <i class="fa fa-facebook-official"></a></i> | <i class="fa fa-linkedin"></i> </li>
   </ul>
 
