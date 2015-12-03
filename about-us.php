@@ -47,7 +47,7 @@ setcookie("lang", "ENG", time() + (86400 * 30), "/");
   <ul>
   <li>Γιώργος Στεφανίδης | <a href="https://www.facebook.com/georgestef" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/stefanidisgeorge" <i class="fa fa-linkedin"></a> </li>
   <li>Αλέξανδρος Μόδης | <a href="https://www.facebook.com/alexander.modis" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/alexmodis" <i class="fa fa-linkedin"></i></a> </li>
-  <li>Γιώργος Δήμας | <a href="https://www.facebook.com/geodimas" <i class="fa fa-facebook-official"></a></i> |<a href="gr.linkedin.com/in/geodhmas" <i class="fa fa-linkedin"></i> </a></li>
+  <li>Γιώργος Δήμας | <a href="https://www.facebook.com/geodimas" <i class="fa fa-facebook-official"></a></i> |<a href="https://gr.linkedin.com/in/geodhmas" <i class="fa fa-linkedin"></i> </a></li>
   <li>Βασίλης Μπαλάφας | <a href="https://www.facebook.com/Vasilis197" <i class="fa fa-facebook-official"></a></i> | <i class="fa fa-linkedin"></i> </li>
   </ul>
 
