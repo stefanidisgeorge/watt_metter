@@ -45,10 +45,10 @@ setcookie("lang", "ENG", time() + (86400 * 30), "/");
  <p>
   <h3>Η ομάδα αποτελείται από 4 άτομα :</h3>
   <ul>
-  <li>Γιώργος Στεφανίδης | <a href="https://www.facebook.com/georgestef" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/stefanidisgeorge" <i class="fa fa-linkedin"></a> </li>
-  <li>Αλέξανδρος Μόδης | <a href="https://www.facebook.com/alexander.modis" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/alexmodis" <i class="fa fa-linkedin"></i></a> </li>
-  <li>Γιώργος Δήμας | <a href="https://www.facebook.com/geodimas" <i class="fa fa-facebook-official"></a></i> |<a href="https://gr.linkedin.com/in/geodhmas" <i class="fa fa-linkedin"></i> </a></li>
-  <li>Βασίλης Μπαλάφας | <a href="https://www.facebook.com/Vasilis197" <i class="fa fa-facebook-official"></a></i> | <i class="fa fa-linkedin"></i> </li>
+  <li>Γιώργος Στεφανίδης | <a href="https://www.facebook.com/georgestef" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/stefanidisgeorge" <i class="fa fa-linkedin"></a> | <a href="mailto:geo_stef@ieee.org" <i class="fa fa-envelope"></a> </li>
+  <li>Αλέξανδρος Μόδης | <a href="https://www.facebook.com/alexander.modis" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/alexmodis" <i class="fa fa-linkedin"></i></a> | <a href="#" <i class="fa fa-envelope"></a> </li>
+  <li>Γιώργος Δήμας | <a href="https://www.facebook.com/geodimas" <i class="fa fa-facebook-official"></a></i> |<a href="https://gr.linkedin.com/in/geodhmas" <i class="fa fa-linkedin"></i> </a>| <a href="#" <i class="fa fa-envelope"></a> </li>
+  <li>Βασίλης Μπαλάφας | <a href="https://www.facebook.com/Vasilis197" <i class="fa fa-facebook-official"></a></i> | <i class="fa fa-linkedin"></i> | <a href="mailto:me@vasilis.pw" <i class="fa fa-envelope"></a> </li>
   </ul>
 
 
@@ -74,10 +74,10 @@ setcookie("lang", "ENG", time() + (86400 * 30), "/");
  <p>
   <h3>The team consists of 4 people :</h3>
   <ul>
-  <li>George Stefanidis | <a href="https://www.facebook.com/georgestef" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/stefanidisgeorge" <i class="fa fa-linkedin"></a> </li>
-  <li>Alexandros Modis | <a href="https://www.facebook.com/alexander.modis" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/alexmodis" <i class="fa fa-linkedin"></i></a> </li>
-  <li>George Dimas | <a href="https://www.facebook.com/geodimas" <i class="fa fa-facebook-official"></a></i> |<a href="https://gr.linkedin.com/" <i class="fa fa-linkedin"></i> </a></li>
-  <li>Vasilis Balafas | <a href="https://www.facebook.com/Vasilis197" <i class="fa fa-facebook-official"></a></i> | <i class="fa fa-linkedin"></i> </li>
+  <li>George Stefanidis | <a href="https://www.facebook.com/georgestef" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/stefanidisgeorge" <i class="fa fa-linkedin"></a> | <a href="mailto:geo_stef@ieee.org" <i class="fa fa-envelope"></a> </li>
+  <li>Alexandros Modis | <a href="https://www.facebook.com/alexander.modis" <i class="fa fa-facebook-official"></a></i> | <a href="https://gr.linkedin.com/in/alexmodis" <i class="fa fa-linkedin"></i></a> | <a href="#" <i class="fa fa-envelope"></a> </li>
+  <li>George Dimas | <a href="https://www.facebook.com/geodimas" <i class="fa fa-facebook-official"></a></i> |<a href="https://gr.linkedin.com/in/geodhmas" <i class="fa fa-linkedin"></i> </a>| <a href="#" <i class="fa fa-envelope"></a> </li>
+  <li>Vasilis Balafas | <a href="https://www.facebook.com/Vasilis197" <i class="fa fa-facebook-official"></a></i> | <i class="fa fa-linkedin"></i> | <a href="mailto:me@vasilis.pw" <i class="fa fa-envelope"></a> </li>
   </ul>
 
 

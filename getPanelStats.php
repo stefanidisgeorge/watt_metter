@@ -7,7 +7,9 @@ $SQLGetLogs = $odb -> query("SELECT * FROM `stats` ORDER BY `id` DESC Limit 1");
 				
 					
 				}
-	
+	if($watt<14){
+	$watt=0;
+	}
 	$response = array(
 					'status' => 'ok',
 					'watts' =>  $watt
