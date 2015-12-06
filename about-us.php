@@ -95,7 +95,11 @@ setcookie("lang", "ENG", time() + (86400 * 30), "/");
 
                 </div>
                 </div>
+				<div class="row">
+					<div class="col-sm-12" style="text-align: center;" > Copyright © Watt Meter 2015</div>
+            
+				</div>
                 </section>
                 </body>
-<?php include('footer.php');  ?>
+
                 </html>
