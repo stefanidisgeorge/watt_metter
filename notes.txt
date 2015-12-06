@@ -1,6 +1,7 @@
 Big data on smart grids
 IOT watt metter
 Centralized power consuption mettering
+(Efficient control of energy costs begins with the precise measurement and centralized monitoring of all energy sources.)
 New generation networks mettering
 Energy saving 
 Enviromental efficiency using smart grids and IOT
