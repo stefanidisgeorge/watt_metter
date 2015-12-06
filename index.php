@@ -21,12 +21,12 @@ setcookie("lang", "ENG", time() + (86400 * 30), "/");
    <head>
       <title>Watt Meter</title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <script src = 'https://code.jquery.com/jquery-1.11.1.min.js'></script>
+	  <script src = 'http://code.jquery.com/jquery-1.11.1.min.js'></script>
       <script src = 'js/updateWatt.js'></script>
       <script src="js/raphael-2.1.4.min.js"></script>
       <script src="js/justgage-1.1.0.min.js"></script>
-      <link href="css/theme.css" rel="stylesheet" media="screen">
-      <link href="css/themefot.css" rel="stylesheet" media="screen">
+       <link href="css/theme.css" rel="stylesheet" media="screen">
+
    </head>
    <body>
       <section class="container">
@@ -75,5 +75,7 @@ setcookie("lang", "ENG", time() + (86400 * 30), "/");
             
             </div>
       </section>
+	     <script src="js/bootstrap.min.js"></script>
+
    </body>
 </html>
