@@ -42,7 +42,7 @@ void loop()
   {
     I = emon1.calcIrms(1480);
     P = 230*I;
-    String  mainData = "consumption=" + doubleToString(P, 2);
+    String  mainData = "consumption=" + double2string(P,2);
     client.println("POST /update.php HTTP/1.1");
     client.println("Host: 104.131.163.78");
     client.println("User-Agent: arduino-ethernet");
@@ -63,22 +63,24 @@ void loop()
   }
 }
 
+String double2string(double n, int ndec) {
+    String r = "";
 
-String doubleToString(double input,int decimalPlaces)
-{
-  if(decimalPlaces!=0)
-  {
-    String string = String((int)(input*pow(10,decimalPlaces)));
-    if(abs(input)<1){
-    if(input>0)
-    string = "0"+string;
-    else if(input<0)
-    string = string.substring(0,1)+"0"+string.substring(1);
+    int v = n;
+    r += n;     // whole number part
+    r += '.';   // decimal point
+    int i;
+    for (i=0;i<ndec;i++) {
+        // iterate through each decimal digit for 0..ndec 
+        n -= v;
+        n *= 10; 
+        v = n;
+        r += v;
     }
-    return string.substring(0,string.length()-decimalPlaces)+"."+string.substring(string.length()-decimalPlaces);
-    }
-  else
-  {
-    return String((int)input);
-  }
+
+    return r;
 }
+
+
+
+
