@@ -20,7 +20,7 @@ while ($getInfo = $SQLGetLogs->fetch(PDO::FETCH_ASSOC)) {
     $monthnumber = substr($monthnumber, 0, -4);
     $watt        = $getInfo['sum'];
     $counter     = $getInfo['counter'];
-    if ($monthnumber == $month) {
+    if ($monthnumber == $month or $monthnumber-1==$monthnumber-1) {
         if (array_key_exists($datenumber, $array1)) {
             $array1[$datenumber] = $array1[$datenumber] + $watt;
             $array2[$datenumber] = $array2[$datenumber] + $counter;

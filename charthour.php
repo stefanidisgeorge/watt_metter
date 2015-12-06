@@ -20,7 +20,7 @@ while ($getInfo = $SQLGetLogs->fetch(PDO::FETCH_ASSOC)) {
     $lasttime   = $getInfo['time'];
     $watt       = $getInfo['sum'];
     $counter    = $getInfo['counter'];
-    if ($datenumber == $day) {
+   if ($datenumber == $day) {
         $array[$lasttime] = $watt / $counter;
         
     }
@@ -62,7 +62,7 @@ categories: [<?php foreach ($array as $key => $val) { echo '\''.$key.':00\',';} 
         series: [{
 		    showInLegend: false, 
             name: 'Consumption',
-            data: [<?php foreach ($array as $key => $val) { echo ''.$val.',';} ?>]
+            data: [<?php foreach ($array as $key => $val) { echo ''.number_format($val, 2, '.', ',').',';} ?>]
         }]
     });
 });
